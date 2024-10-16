@@ -7,11 +7,18 @@ lang=st.selectbox("Select Language",["English","French","Spanish","Portuguese","
 inputtext=st.text_input("Enter the text you want to translate")
 
 
-GROQ_API_KEY=os.getenv('GROQ_API_KEY')
+OPEN_API_KEY='sk-7swPgmf6mk37rBdEhQlVwmlk2LSW7ZoRB9WXUQoq7IT3BlbkFJjUYPvgxdvB80PAlDVbfMWSjcfQ-duJiFtGsGJou2MA'
+LANGCHAIN_API_KEY='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'
+LANGCHAIN_PROJECT='GENAI_APP_PROJECT1'
+HF_Token='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'
+GROQ_API_KEY='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'
 
-os.environ['LANGCHAIN_API_KEY'] = os.getenv('LANGCHAIN_API_KEY')
+
+GROQ_API_KEY=GROQ_API_KEY
+
+os.environ['LANGCHAIN_API_KEY'] = LANGCHAIN_API_KEY
 os.environ['LANGCHAIN_TRACING_V2']='true'
-os.environ['LANGCHAIN_PROJECT'] = os.getenv("LANGCHAIN_PROJECT")
+os.environ['LANGCHAIN_PROJECT'] = LANGCHAIN_PROJECT
 
 from langchain_core.prompts import ChatPromptTemplate
 
