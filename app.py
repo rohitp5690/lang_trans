@@ -21,7 +21,7 @@ os.environ['LANGCHAIN_PROJECT'] = LANGCHAIN_PROJECT
 from langchain_core.prompts import ChatPromptTemplate
 
 
-system_template="translate the following into {language}"
+system_template="translate the following into {language}.Also, use minimum possible words, you can also use emojis"
 prompt=ChatPromptTemplate.from_messages([
     ("system",system_template),
     ("user","{input_text}")
