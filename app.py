@@ -2,7 +2,7 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 
-st.title("Language Translater")
+st.title("Drunk A.I")
 lang=st.selectbox("Select Language",["English","French","Spanish","Portuguese","Russian","Hindi","Hinglish"])
 inputtext=st.text_input("Enter the text you want to translate")
 
@@ -21,7 +21,7 @@ os.environ['LANGCHAIN_PROJECT'] = LANGCHAIN_PROJECT
 from langchain_core.prompts import ChatPromptTemplate
 
 
-system_template="translate the following into {language}.Also, use minimum possible words, you can also use emojis"
+system_template="reply the following query in the language {language}.Also, use minimum possible words, you can also use emojis. you are drunk and angry."
 prompt=ChatPromptTemplate.from_messages([
     ("system",system_template),
     ("user","{input_text}")
