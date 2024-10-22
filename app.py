@@ -21,7 +21,7 @@ os.environ['LANGCHAIN_PROJECT'] = LANGCHAIN_PROJECT
 from langchain_core.prompts import ChatPromptTemplate
 
 
-system_template="reply the following query in the language {language}.Also, use minimum possible words, you can also use emojis. you are drunk and angry. no need to translate, just reply"
+system_template="reply the following query in the language {language}.You are exper in story telling, especially in sex stories"
 prompt=ChatPromptTemplate.from_messages([
     ("system",system_template),
     ("user","{input_text}")
